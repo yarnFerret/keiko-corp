@@ -7,7 +7,8 @@
          url('../fonts/opensans-regular.ttf') format('truetype'),
          url('../fonts/opensans-regular.svg#LatoRegular') format('svg');
     font-weight: normal;
-    font-style: normal;
+		font-style: normal;
+		font-display: swap;
 
 }
 
@@ -21,7 +22,7 @@
          url('../fonts/opensans-bold.svg#LatoRegular') format('svg');
     font-weight: normal;
     font-style: normal;
-
+		font-display: swap
 }
 
 
@@ -34,17 +35,30 @@
          url('../fonts/opensans-semibold.svg#open_sanssemibold') format('svg');
     font-weight: normal;
     font-style: normal;
-
+		font-display: swap
 }
 
 
 
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
 
-
+:after,:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
 
 
 section, footer {
 	background: #fffcfc;
+}
+
+footer,header,nav,section {
+    display: block
 }
 
 /*		General CSS		*/
@@ -52,6 +66,16 @@ body{
 	background: #20866e;
 	padding: 0px;
 	margin: 0px;
+	line-height: 1.42857143;
+}
+
+strong {
+    font-weight: 700
+}
+
+a {
+		background-color: transparent;
+		text-decoration: none
 }
 
 a:focus{
@@ -59,17 +83,130 @@ a:focus{
 	text-decoration: none!important;
 }
 
+h1 {
+    margin: .67em 0;
+		font-size: 2em;
+		font-weight: 500;
+		line-height: 1.1;
+		margin-top: 20px;
+    margin-bottom: 10px
+}
+
+img {
+    border: 0
+}
+
+button,input,optgroup,select,textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit
+}
+
+button {
+    overflow: visible
+}
+
+button,select {
+    text-transform: none
+}
+button,html input[type=button],input[type=reset],input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer
+}
+input {
+    line-height: normal
+}
+
+p {
+    margin: 0 0 10px
+}
+
+
 .container{
 	max-width: 1130px;
+	 padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto
+}
+
+
+.text-center {
+    text-align: center
+}
+
+.text-lowercase {
+    text-transform: lowercase
+}
+
+.text-uppercase {
+    text-transform: uppercase
+}
+
+ol,ul {
+    margin-top: 0;
+    margin-bottom: 10px
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none
+}
+
+.list-inline {
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none
+}
+
+.list-inline>li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px
+}
+
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 17.5px;
+    border-left: 5px solid #eee
+}
+
+
+/* grid */
+
+.app_features .row{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+    margin-right: -15px;
+    margin-left: -15px
+} 
+.about .col-md-6,.featured_on .col-sm-6,.app_features .col-md-4 {
+	min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px
+}
+
+.about .row {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr)
+}
+
+.featured_on ul {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 }
 
 
 
 
+.pull-right {
+    float: right!important
+}
 
-
-
-
+.pull-left {
+    float: left!important
+}
 
 
 /*		Header 		*/
@@ -793,10 +930,15 @@ footer .copyright a{
 		display: block;
 		width: 100%;
 	}
+	.featured_on .col-sm-6 {grid-column: span 4	}
 }
 
 @media (max-width: 767px) {
 
+	.container {
+        max-width:750px
+		}
+	.app_features .col-md-4 {grid-column: span 3}
 
 	/*		Header 		*/
 	header .logo{
@@ -886,14 +1028,14 @@ footer .copyright a{
 
 	/*		About Section 		*/
 	.about .features_list {
-		text-align: center;
+		/* text-align: center; */
 		margin: 0;
 	}
 
 	.about .features_list ul li{
-		text-indent: 0;
-		background: transparent!important;
-		margin-bottom: 20px;
+		/* text-indent: 0; */
+		/* background: transparent!important; */
+		/* margin-bottom: 20px; */
 	}
 
 	.about .features_list ul li:last-child{
@@ -922,4 +1064,12 @@ footer .copyright a{
 	.sub_box #mc_submit{
 		margin-top: 20px;
 	}
+}
+@media (max-width: 992px) {
+
+	.container {
+        max-width:980px
+		}
+	.about .col-md-6 {grid-column: span 2}
+	.featured_on .col-sm-6 {grid-column: span 2	}
 }
