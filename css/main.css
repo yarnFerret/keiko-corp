@@ -338,7 +338,7 @@ header .social li:first-child{
 	position: relative;
 	width: 100%;
 	height: 560px;
-	background: url('../img/hero.webp') no-repeat fixed center center;
+	background: url('../img/hero1.webp') no-repeat fixed center center;
 	background-size: cover;
 }
 
@@ -369,9 +369,9 @@ header .social li:first-child{
 	margin: 15px 0 35px 0;
 }
 
-#slider .caption p{
+/* #slider .caption p{
 	margin: 0;
-}
+} */
 
 a.app_store_btn{
 	display: inline-block;
@@ -1064,6 +1064,7 @@ footer .copyright a{
 	.sub_box #mc_submit{
 		margin-top: 20px;
 	}
+	
 }
 @media (max-width: 992px) {
 
@@ -1072,6 +1073,7 @@ footer .copyright a{
 		}
 	.about .col-md-6 {grid-column: span 2}
 	.featured_on .col-sm-6 {grid-column: span 2	}
+	
 }
 
 /* animated */

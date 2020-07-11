@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	//Navigation menu scrollTo
-	$('header nav ul li a').click(function(event){
+	// $('header nav ul li a').click(function(event){
 	// 	event.preventDefault();
 	// 	var section = $(this).attr('href');
 	// 	var section_pos = $(section).position();
@@ -15,7 +15,7 @@ $(document).ready(function(){
 	// $('.app_link').click(function(e){
 	// 	event.preventDefault();
 	// 	$(window).scrollTo({top:$("#hero").position().top, left:'0px'}, 1000);		
-	});
+	// });
 
 
 
@@ -65,16 +65,16 @@ $(document).ready(function(){
 
 
 	//Nice scroll initialization
-	$("html").niceScroll({
-		scrollspeed: 50,
-		autohidemode : false,
-		cursorwidth : 8,
-		cursorborderradius: 8,
-		cursorborder : "0",
-		background : "rgba(48, 48, 48, .4)",
-		cursorcolor : '#1f1f1f',
-		zindex : 999
-	});
+	// $("html").niceScroll({
+	// 	scrollspeed: 50,
+	// 	autohidemode : false,
+	// 	cursorwidth : 8,
+	// 	cursorborderradius: 8,
+	// 	cursorborder : "0",
+	// 	background : "rgba(48, 48, 48, .4)",
+	// 	cursorcolor : '#1f1f1f',
+	// 	zindex : 999
+	// });
 
 
 
